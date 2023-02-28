@@ -1,0 +1,176 @@
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*===== Colors =====*/
+  --bg-color: #505050;
+  --color-1: #ffffff;
+
+  /*===== Font and Typography =====*/
+  --title-font: "Poppins", sans-serif;
+  --sub-font: Arial, Helvetica, sans-serif;
+  --body-font: "sans-serif", Helvetica, sans-serif;
+  /*   --sub-font:Arial, Helvetica, sans-serif; */
+
+  /*   --font-1:3rem;
+  --font-2:3rem;*/
+  --font-3: 2.5rem;
+  --font-4: 5rem;
+  --font-5: 13rem;
+
+  /*===== Margenes Bottom =====*/
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+}
+
+/*=============== General CSS ===============*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--bg-color);
+}
+a {
+  text-decoration: none;
+  color: var(--color-1);
+}
+img {
+  width: 350px;
+}
+.section{
+  height:90vh;
+  border:1px solid red;
+}
+
+/*--------------- NavBar ---------------*/
+.navBar {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  font-family: var(--title-font);
+}
+.navBar a {
+  margin: auto;
+  margin-left: 25px;
+}
+.navBar img {
+  margin: 10px auto;
+
+  width: 25px;
+  height: 25px;
+}
+.menu {
+  display: flex;
+  width: 30%;
+  height: 100%;
+  justify-content: space-around;
+  border: 1px solid green;
+}
+.menu a {
+  height: 100%;
+  width: 150px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu a:hover {
+  color: red;
+}
+/*--------------- Main ---------------*/
+#home {
+  display: flex;
+  justify-content: center;
+  background-image: url("./assets/galaxy-menu-2.jpg");
+  min-height: 600px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mainText {
+  padding-top: 100px;
+/*   z-index: 3; */
+  /* text-decoration: double; */
+  color: silver;
+  text-shadow: 0 0 10px rgb(219, 237, 235);
+}
+#home h1 {
+  font-family: var(--title-font);
+  font-weight: bold;
+  font-size: var(--font-5);
+}
+
+#home span {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 3.5rem;
+}
+#home h3 {
+  font-family: var(--title-font);
+  font-size: var(--font-4);
+  letter-spacing: 50px;
+}
+.astro {
+  position: absolute;
+  z-index: 1;
+  right: 20px;
+  top: 405px;
+  width: 500px;
+  /* border: 1px solid red; */
+  height: auto;
+  transform: rotate(3deg);
+}
+/*--------------- About ---------------*/
+.text-galaxy {
+  color: var(--color-1);
+}
+.about img {
+  width: 100%;
+  height: 60vmax;
+  /*   clip-path: polygon(0 50px, 100% 0, 100% 100%, 0 100%);
+  margin-top: -40px;
+  position: relative; */
+}
+/*===== Buttons =====*/
+
+#myBtn {
+  display: none;
+  position: fixed;
+
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.486);
+  color: white;
+  cursor: pointer;
+  /* padding: 15px; */
+  padding: 2px 8px 0px;
+  border-radius: 60px;
+  transition: 0.3s ease-out;
+}
+#myBtn img {
+  height: 50px;
+  width: 40px;
+}
+#myBtn:hover {
+  background-color: #555;
+  transition: 0.2s ease-in;
+}
