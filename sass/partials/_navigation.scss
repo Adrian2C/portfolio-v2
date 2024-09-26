@@ -1,0 +1,20 @@
+@use '../utils/index' as  ut;
+
+.section__title{
+    text-align: center;
+    font-size: map-get(ut.$spacing, "4xl");
+    margin-bottom: map-get(ut.$sizing, "3xl");
+    background-image: linear-gradient(ut.$btn-1, white);
+    color: transparent;
+    background-clip: text;
+    
+    
+    &::after{
+        content:attr(data-heading);
+        display:block;
+        font-size: map-get(ut.$spacing,"lg");
+        font-weight: 300;
+        /* color:var(--skin-color); */
+        color:ut.$color-2;
+    }
+}

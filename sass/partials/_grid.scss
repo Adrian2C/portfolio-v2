@@ -1,0 +1,29 @@
+@use "../utils/index" as ut;
+
+.grid{
+  display:grid;
+}
+.grid-ly {
+  @include ut.grid-layout(3, 3);
+  justify-content: center;
+
+  @media screen and (min-width: map-get(ut.$breakpoints, "large")) {
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(3, 300px);
+  }
+
+  @media screen and (max-width: map-get(ut.$breakpoints, "medium")) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (max-width: map-get(ut.$breakpoints, "small")) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  .grid-item {
+    background-color: red;
+    width: 100%;
+    height: 100%;
+    
+  }
+}

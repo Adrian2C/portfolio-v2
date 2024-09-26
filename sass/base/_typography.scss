@@ -1,0 +1,12 @@
+@use '../utils/index' as u;
+
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Sora:wght@100..800&display=swap');
+
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: u.$text-color;
+  font: normal 125% / 1.4 u.$text-font;
+}

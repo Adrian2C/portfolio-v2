@@ -1,0 +1,54 @@
+@use '../utils/index' as mix;
+
+.header {
+  @include mix.navbar-height;
+  background-color: #1b30395e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  color: white;
+  
+  &__logo {
+    cursor: pointer;
+    .enlace {
+      &__img {
+        height: 50px;
+        width: auto;
+        background-color: red;
+        border-radius: 30px;
+      }
+    }
+  }
+  &__nav {
+    .nav__list {
+      list-style: none;
+      .item {
+        display: inline-block;
+        padding: 0 20px;
+        a {
+          color: red;
+          font-size: 700;
+          color: #eceff1;
+          text-decoration: none;
+          @include mix.transition;
+          &:hover {
+            color: mix.$color-6;
+            border-bottom:1px solid mix.$color-6;
+          }
+        }
+      }
+    }
+  }
+  &__social{
+    display:flex;
+    &--a{
+      padding:0 5px;
+      text-decoration: none;
+      img{
+        height:30px;
+        background-color: white;
+      }
+    }
+  }
+}

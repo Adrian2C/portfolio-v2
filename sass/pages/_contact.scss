@@ -1,0 +1,141 @@
+@use "../utils/index" as ut;
+.contact{
+  margin:50px 0;
+}
+.contact__container {
+  grid-template-columns: 300px 340px; /* crea dos columnas para que esten separadas las dos partes de contacto*/
+  column-gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  background:ut.$color-1;
+  padding:map-get(ut.$spacing,"xl");
+  border-radius:15px;
+}
+.contact__info {
+  display: grid;
+  row-gap: 1rem;
+}
+.contact__card {
+  /*forma a las tarjetas y color de contacto*/
+  background-color: ut.$color-1;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  border:1px solid ut.$color-6;
+}
+.contact__card-icon {
+  font-size: 1.8rem;
+  color: ut.$color-5;
+  margin-bottom: map-get(ut.$sizing, "xs");
+}
+.contact__card-title,
+.contact__card-data {
+  font-size: map-get(ut.$spacing, "lg");
+}
+.contact__card-title {
+  font-weight: 500;
+}
+.contact__card-data {
+  /*encuadra todo pa que cada elemento este en su propia linea centrada, uno arriba del otro*/
+  display: block;
+  margin-bottom: map-get(ut.$sizing, "md");
+}
+.contact__button {
+  color: ut.$color-3; /*boton de escribeme */
+  font-size: map-get(ut.$sizing, "lg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.25rem;
+  cursor: pointer;
+}
+.contact__button-icon {
+  font-size: 1rem;
+  transition: 0.3s;
+}
+.contact__button:hover .contact__button-icon {
+  transform: translateX(0.25rem);
+}
+
+.input__container {
+  position: relative;
+  margin-top: 0.1rem;
+  margin-bottom: 1.9rem;
+}
+.input {
+  width: 100%;
+  border: 2px solid ut.$color-6;
+  background-color: transparent;
+  padding: 0.6rem 1.2rem;
+  color: ut.$white;
+  font-weight: 500;
+  font-size:map-get(ut.$sizing,"lg");
+  letter-spacing: 0.0313rem;
+  outline: none;
+  border-radius: 0.5rem;
+  transition: 0.3s;
+}
+textarea.input {
+  padding: 0.8rem 1.2rem;
+  min-width: 140px;
+  border-radius: 0.5rem;
+  resize: none;
+}
+
+.input__container label {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  padding: 0 0.4rem;
+  color: ut.$color-3;
+  font-weight: 500;
+  pointer-events: none;
+  z-index: 15;
+  transition: 0.5s;
+}
+.input__container.textarea label {
+  top: 1rem;
+  transform: translateY(0);
+}
+.input__container span {
+  position: absolute;
+  top: 0;
+  left: 25px;
+  color: transparent;
+  transform: translateY(-50%);
+  font-size: map-get(ut.$sizing,"lg");
+  padding: 0 0.4rem;
+  pointer-events: none;
+  z-index:10;
+}
+.input__container span::before,
+.input__container span::after {
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 5px;
+  opacity: 0;
+  background-color: ut.$color-1;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.3s;
+}
+
+.input__container span::before {
+  left: 50%;
+}
+.input__container span::after {
+  right: 50%;
+}
+.input__container.focus label {
+  top: 0;
+  transform: translateY(-50%);
+  left: 25px;
+  font-size: map-get(ut.$sizing,"lg");
+}
+.input__container.focus span::before,
+.input__container.focus span::after {
+  width: 50%;
+  opacity: 1;
+}

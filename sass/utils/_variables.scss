@@ -1,0 +1,96 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Regular font family
+/// @stype List
+$text-font: "Oxanium", sans-serif;
+//second font
+$sora-font: "Sora", sans-serif;
+
+//main color
+
+/// Copy text color
+/* $text-color: rgb(117, 0, 136); */
+
+//background-color
+$bg-color: rgb(55, 0, 64);
+
+//Secondary color
+$secondary-color:rgb(129,76,236);
+
+/// Light grey
+$text-color: rgb(213, 213, 213);
+
+/// Medium grey
+$mid-grey: rgb(217, 217, 217);
+
+/// Dark grey
+$dark-grey: rgb(165, 165, 165);
+
+
+//neutral
+$black:#000000;
+$white:#ffffff;
+//font
+$color-1:#1c0d27;
+$color-2:#dddddd;
+$color-3:#9b9b9b;
+$color-4:#8750f7;
+$color-5:#814cec;
+$color-6:#f119d5;
+
+//button
+$btn-1:#b21ded;
+$btn-2:#750088;
+
+/// Container's maximum width
+$max-width: 64rem;
+
+/// Breakpoints navbar
+$navbar-heights: (
+  "desktop": 80px,
+  "tablet": 70px,
+  "mobile": 60px
+);
+
+$breakpoints: (
+  "small": 320px,
+  "medium": 768px,
+  "large": 1024px,
+/*   "xlarge": 1280px, */
+);
+
+/// Spacing map - non text
+/// @prop {String} keys - Keys are identifiers mapped to specific spacing values
+/// @prop {Map} values - Values are actual spacing measurements expressed in pixels
+$spacing: (
+  "xs": 4px,
+  "sm": 8px,
+  "md": 12px,
+  "lg": 16px,
+  "xl": 20px,
+  "xxl": 28px,
+  "3xl": 40px,
+  "4xl": 60px,
+  "5xl": 100px,
+  "6xl": 160px,
+  "7xl": 240px,
+) !default;
+
+/// Sizing map - text
+/// @prop {String} keys - Keys are identifiers mapped to specific sizing values
+/// @prop {Map} values - Values are actual sizing measurements expressed in rem units
+$sizing: (
+  "xs": 0.25rem,
+  "sm": 0.5rem,
+  "md": 0.75rem,
+  "lg": 1rem,
+  "xl": 1.25rem,
+  "xxl": 1.75rem,
+  "3xl": 2.5rem,
+  "4xl": 3.75rem,
+  "5xl": 6.25rem,
+  "6xl": 10rem,
+  "7xl": 15rem,
+) !default;

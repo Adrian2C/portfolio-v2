@@ -1,0 +1,42 @@
+@use "../utils/index" as ut;
+
+.main {
+  height: 95vh;
+  width: 50%;
+
+  &_video {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: -1;
+    filter: blur(2px);
+    top: 0;
+  }
+  &__container {
+    padding-left: 50px;
+    height: 90%;
+    display: flex;
+    align-items: center;
+
+    &--me {
+      h1 {
+        font-size: 60px;
+        text-align: center;
+        margin-top: 10px;
+
+        background-image: linear-gradient(ut.$btn-1, white);
+        color: transparent;
+        background-clip: text;
+      }
+      p {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .me__contact {
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-evenly;
+      }
+    }
+  }
+}

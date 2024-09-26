@@ -1,0 +1,46 @@
+@use './variables' as v;
+
+
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+//boxshadows
+@mixin box-shadow($x, $y, $blur, $color) {
+  -webkit-box-shadow: $x $y $blur $color;
+  -moz-box-shadow: $x $y $blur $color;
+  box-shadow: $x $y $blur $color;
+}
+//transitions con propiedades ya preconfiguradas : all .3s eas
+@mixin transition($property: all, $duration: 0.3s, $timing-function: ease-in-out) {
+  transition: $property $duration $timing-function;
+}
+
+
+//breakpoints para navbar
+
+@mixin navbar-height {
+  height: map-get(v.$navbar-heights, "desktop"); // Altura por defecto para desktop
+
+  @media (max-width: map-get(v.$breakpoints, "medium")) {
+    height: map-get(v.$navbar-heights, "tablet");
+  }
+
+  @media (max-width: map-get(v.$breakpoints, "small")) {
+    height: map-get(v.$navbar-heights, "mobile");
+  }
+}
+
+
+/* breakpoints for the body */
+@mixin grid-layout($columns, $rows) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  grid-template-rows: repeat($rows, 1fr);
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+}

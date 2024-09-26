@@ -1,0 +1,68 @@
+@use "../utils/index" as ut;
+
+.qualification__container{
+    grid-template-columns: repeat(2,340px);
+    column-gap: 3rem;
+    justify-content: center;
+
+    .qualification__title{
+        font-size: map-get(ut.$sizing, "lg");
+        font-weight: 500;
+        margin-bottom: map-get(ut.$sizing, "3xl");
+    }
+    
+    .timeline__item{
+        position:relative;
+        padding:3rem;
+        margin-bottom: map-get(ut.$sizing, "3xl");
+        &:last-child{
+            margin-bottom: 0;
+        }
+        &::before{
+            content:'';
+            width:1px;
+            position:absolute;
+            left:.48rem;
+            top:0;
+            height:100%;
+            background-color: ut.$color-5;
+        }
+        &:hover .circle__dot{
+            background-color: ut.$color-6;
+        }
+        .circle__dot{
+            position:absolute;
+            left:0;
+            top:0;
+            height: 1rem;
+            width: 1rem;
+            border-radius: 50%;
+            border:2px solid ut.$color-5;
+            transition: .3s;
+            background-color: ut.$color-5;
+        }
+        
+        
+        .timeline__title{
+            font-size: map-get(ut.$sizing, "lg");
+            font-weight: 500;
+            margin-bottom: map-get(ut.$sizing, "xs");
+        }
+        
+        .timeline__text{
+            font-size: map-get(ut.$spacing, "md");
+            margin-bottom: map-get(ut.$sizing, "lg");
+        }
+        
+        .timeline__date{
+            display: flex;
+            align-items: center;
+            column-gap: .4rem;
+            font-size: map-get(ut.$spacing, "lg");
+            color:ut.$color-3; 
+        }
+    }
+    
+    
+}
+

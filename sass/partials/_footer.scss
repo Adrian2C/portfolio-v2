@@ -1,0 +1,61 @@
+@use "../utils/index" as ut;
+
+.footer {
+  &__bg {
+    margin-bottom: 0;
+    background-color: ut.$color-1; /*se le da el color*/
+    border-top: 1px solid ut.$color-5;
+    .footer__container {
+      .footer__title {
+        margin-top: 0;
+        font-size: map-get(ut.$spacing, "7xl");
+        letter-spacing: 20px;
+        text-align: center;
+        margin-bottom: map-get(ut.$sizing, "md");
+        border-bottom: 1px solid ut.$color-6;
+      }
+      .footer__subtitle {
+        font-size: map-get(ut.$spacing, "xl");
+        display: block;
+        margin-top: 1.25rem;
+        text-align: center;
+        letter-spacing: 10px;
+      }
+      
+      .footer__links {
+        display: flex;
+        list-style: none;
+        justify-content: space-evenly;
+        margin: auto;
+        .footer__link:hover {
+          color: ut.$color-6; 
+        }
+      }
+    }
+  }
+}
+.footer__socials {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  padding-top: 30px;
+  .footer__social {
+    font-size: 2rem;
+    margin-right: map-get(ut.$sizing, "xl");
+    &:hover {
+      color: ut.$color-6;
+    }
+  }
+}
+.footer__copy {
+  font-size: map-get(ut.$spacing, "lg");
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid ut.$color-6;
+}
+.footer__title,
+.footer__subtitle,
+.footer__link,
+.footer__social {
+  color: ut.$color-5;
+}

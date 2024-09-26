@@ -1,0 +1,9 @@
+//se le hace forward a las diferentes paginas de la carpeta
+@forward './home';
+@forward './experience';
+@forward './about';
+@forward './education';
+@forward './service';
+@forward './works'; 
+@forward './testimonials';
+@forward  './contact';

@@ -1,0 +1,45 @@
+@use "../utils/index" as ut;
+
+.button {
+  font-weight: 700;
+  color: ut.$text-color;
+  padding: 9px 25px;
+  background: linear-gradient(to right, ut.$btn-1, ut.$btn-2);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  &:hover {
+    /* border: 1px solid ut.$color-6; */
+    -webkit-box-shadow: 0px 0px 22px 6px rgba(224, 27, 224, 0.44);
+    -moz-box-shadow: 0px 0px 22px 6px rgba(224, 27, 224, 0.44);
+    box-shadow: 0px 0px 22px 6px rgba(219, 127, 219, 0.44);
+  }
+}
+
+.contenedor-btn {
+  width:90vw;
+  margin:-50px auto;
+  margin-left:50px;
+  text-align: center;
+/*   border:1px solid white; */
+  .scroll-btn {
+    inline-size: 3rem;
+    block-size: 3rem;
+    display: inline-grid;
+    color: white;
+    grid-row: 3/-1;
+    border: 1px solid white;
+    padding: 15px;
+    border-radius: 50px;
+
+    transition:
+      background-color 0.2s cubic-bezier(0.25, 0, 0.5, 1),
+      color 0.2s cubic-bezier(0.25, 0, 0.5, 1);
+
+    &:hover {
+      background-color: white;
+      color: black;
+    }
+  }
+}

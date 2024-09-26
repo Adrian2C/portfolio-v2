@@ -1,0 +1,22 @@
+//@use de todos los archivos index.scss dentro de las carpetas principales de cada seccion
+//y comentarios
+
+@charset "UTF-8";
+
+// 1. Vendors
+@forward './vendors/normalize';
+
+// 2. Base stuff
+@forward './base/index';
+
+// 3. Layout-related sections
+@forward './partials/index';
+
+// 4. Components
+@forward './components/index';
+
+// 5. Pages
+@forward './pages/index';
+
+// 6. Themes
+@forward './themes/index';
