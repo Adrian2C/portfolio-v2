@@ -3,7 +3,23 @@
 .grid{
   display:grid;
 }
-.grid-ly {
+
+.grid-item{
+  /* height:0vh; */
+  width:90vw;
+  background-size: cover;
+  object-fit: cover;
+  margin:auto;
+  background-attachment: fixed;
+  background-position: center;
+/*   z-index: -1; */
+}
+.grid-barra{
+  width:50%;
+  height:50px;
+  background-color:ut.$color-1;  
+}
+/* .grid-ly {
   @include ut.grid-layout(3, 3);
   justify-content: center;
 
@@ -27,3 +43,4 @@
     
   }
 }
+ */

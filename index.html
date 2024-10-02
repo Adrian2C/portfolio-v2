@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+    <link href="
+    https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css
+    " rel="stylesheet">
+    <script defer src="./js/animation.js"></script><!-- defer, para que corra al terminar de cargar el html -->
     <title>Adrian Coceres</title>
 </head>
 
-<body>
+<body data-scroll-container>
     <header class="header" id="header">
         <div class="header__logo">
             <a href="#main" class="enlace">
@@ -40,7 +43,7 @@
         </div>
     </header>
 
-    <main class="main" id="main">
+    <main data-scroll-section class="main " id="main">
         <video class="main_video" id="background-video" autoplay loop muted
             poster="https://assets.codepen.io/6093409/river.jpg">
             <source src="./sass/assets/Main-bg.mp4" type="video/mp4">
@@ -54,11 +57,11 @@
                 <p>Diseños simples y creativos.</p>
 
                 <div class="me__contact">
-                    <button class="button">
-                        <a href="#"> necesitas inspiracion?</a>
+                    <button class="main-btn button">
+                        <a href="#contact"> Contactame!</a>
                     </button>
-                    <button class="button">
-                        <a href="#"> Contactame!</a>
+                    <button class="second-btn button">
+                        <a href="#works"> necesitas inspiracion?</a>
                     </button>
                 </div>
             </div>
@@ -73,13 +76,14 @@
             </a>
         </div>
     </main>
-    <section class="slider">
+    <div class="slider">
         <div class="list">
             <div class="item" style="--position: 1">
                 <img src="./sass/assets/html5.svg" alt="">
+                <img src="./sass/assets/css3.svg" alt="">
             </div>
             <div class="item" style="--position: 2">
-                <img src="./sass/assets/css3.svg" alt="">
+                <img src="./sass/assets/word.png" alt="">
             </div>
             <div class="item" style="--position: 3">
                 <img src="./sass/assets/Javascript.png" alt="">
@@ -106,8 +110,8 @@
                 <img src="./sass/assets/fire.png" alt="">
             </div>
         </div>
-    </section>
-    <section class="number" id="experience">
+    </div>
+    <div class="number" id="experience">
         <div class="number__container">
             <!-- <p class="number__container--num">1</p>
             <p class="number__container--tx">Año de experiencia</p> -->
@@ -118,9 +122,9 @@
             <p class="number__container--num ocultar" data-cantidad-total="20">0</p>
             <p class="number__container--tx">diseños realizados</p>
         </div>
-    </section>
+    </div>
 
-    <section class="about " id="about">
+    <section class="hidden about " id="about">
         <h2 data-heading="I design and code beautifully simple things and i love what i do. Just simple like that!"
             class="section__title">About me</h2>
 
@@ -152,16 +156,17 @@
                         <span class="about__subtitle">Online 24/7</span>
                     </div>
                 </div>
-                <a href="#contact" class="button"><i class="uil uil-navigator button__icon"></i>
+                <a href="#contact" class="second-btn button"><i class="uil uil-navigator button__icon"></i>
                     Contact Me</a>
             </div>
         </div>
     </section>
-    <section class="services" id="services">
+
+    <section class="hidden services" id="services">
         <h2 data-heading="Tus ideas y proyectos en un sitio que inspire y atraiga" class="section__title">What I offer
         </h2>
 
-        <div class="services container ">
+        <div class="services_container ">
             <div class="services__card">
                 <div class="num ">
                     <p>01</p>
@@ -171,7 +176,7 @@
                 </div>
                 <div class="desc ">
                     <p>Especializado en diseños responsivos y creativos, aplicando tecnologias como Sass, javascript y
-                        React</p>
+                        wordpress</p>
                 </div>
             </div>
             <div class="services__card">
@@ -211,11 +216,28 @@
             </div>
         </div>
     </section>
-    <section class="works" id="works">
+    <section class=" works" id="works">
         <h2 data-heading="Sueños plasmados y entregados a clientes satisfechos" class="section__title">Recent Works</h2>
 
         <div class="grid-ly">
-            <div class="grid-item">
+            <div class="grid-item hidden">
+                <img src="./sass/assets/web-1.jpg" alt="Mis trabajos">
+            </div>
+            <div class="grid-barra"></div>
+
+            <div class="grid-item hidden">
+                <img src="./sass/assets/web-2.jpg" alt="Mis trabajos">
+            </div>
+
+            <!--   <div class="parallax-container">
+
+        </div>
+        <div class="buffer"></div>
+        <div class="parallax-container parallax-container2">
+
+        </div> -->
+
+            <!--             <div class="grid-item">
                 <img src="#" alt="Mis trabajos">
             </div>
             <div class="grid-item">
@@ -235,16 +257,10 @@
             </div>
             <div class="grid-item">
                 <img src="#" alt="Mis trabajos">
-            </div>
-            <div class="grid-item">
-                <img src="#" alt="Mis trabajos">
-            </div>
-            <div class="grid-item">
-                <img src="#" alt="Mis trabajos">
-            </div>
+            </div> -->
         </div>
     </section>
-    <section class="qualification" id="education">
+    <section class="hidden qualification" id="education">
         <h2 data-heading="the Journey to be who am I" class="section__title">Education</h2>
         <div class="qualification__container grid ">
             <div class="education">
@@ -256,27 +272,29 @@
                 <div class="timeline">
                     <div class="timeline__item">
                         <div class="circle__dot"></div>
-                        <h3 class="timeline__title">XYZ Unviersity (Sometown,NJ)</h3>
-                        <p class="timeline__text">BFA in Graphic Design</p>
+                        <h3 class="timeline__title">Coursera - Google</h3>
+                        <p class="timeline__text">Programa especializado: Diseño de Experiencia del Usuario (UX) de
+                            Google</p>
                         <span class="timeline__date"><i class="uil uil-calendar-alt"></i>
-                            2011 - 2013</span>
+                            2020 - 2021</span>
                     </div>
 
                     <div class="timeline__item">
                         <div class="circle__dot"></div>
-                        <h3 class="timeline__title">ABC University (Sometown), NJ</h3>
-                        <p class="timeline__text">Diploma in Web Design</p>
+                        <h3 class="timeline__title">Coursera - Google</h3>
+                        <p class="timeline__text">Diseños web adaptables en Adobe XD</p>
                         <span class="timeline__date"><i class="uil uil-calendar-alt"></i>
-                            2013 - 2015</span>
+                            2020 - 2021</span>
                     </div>
-
                     <div class="timeline__item">
                         <div class="circle__dot"></div>
-                        <h3 class="timeline__title">KLM Univesity(Sometown, NJ)</h3>
-                        <p class="timeline__text">BS in Web Development</p>
+                        <h3 class="timeline__title">Coursera - Google</h3>
+                        <p class="timeline__text">Crear prototipos y diseños de alta fildelidad en Figma</p>
                         <span class="timeline__date"><i class="uil uil-calendar-alt"></i>
-                            2013 - 2017</span>
+                            2020 - 2021</span>
                     </div>
+
+
                 </div>
             </div>
             <div class="experience">
@@ -288,26 +306,26 @@
                 <div class="timeline">
                     <div class="timeline__item">
                         <div class="circle__dot"></div>
-                        <h3 class="timeline__title">Copalopa Inc. (Sometown, NJ)</h3>
-                        <p class="timeline__text">Lead / Senior UX Designer</p>
+                        <h3 class="timeline__title">Gobierno de la ciudad - UTN</h3>
+                        <p class="timeline__text">Desarrollador front end</p>
                         <span class="timeline__date"><i class="uil uil-calendar-alt"></i>
-                            2018 - Present</span>
+                            2021 - 2022</span>
                     </div>
 
                     <div class="timeline__item">
                         <div class="circle__dot"></div>
-                        <h3 class="timeline__title">Gagoble Inc. (Sometown, NJ)</h3>
-                        <p class="timeline__text">Web Site / UX Designer</p>
+                        <h3 class="timeline__title">EducacionIt</h3>
+                        <p class="timeline__text">Base de Datos y SQL</p>
                         <span class="timeline__date"><i class="uil uil-calendar-alt"></i>
-                            2015 - 2018</span>
+                            2021 - 2022</span>
                     </div>
 
                     <div class="timeline__item">
                         <div class="circle__dot"></div>
-                        <h3 class="timeline__title">Cropalopa Inc. (Sometown, NJ)</h3>
-                        <p class="timeline__text">Junior UX Designer</p>
+                        <h3 class="timeline__title">EducacionIt</h3>
+                        <p class="timeline__text">Linux</p>
                         <span class="timeline__date"><i class="uil uil-calendar-alt"></i>
-                            2013 - 2015</span>
+                            2021 - 2022</span>
                     </div>
                 </div>
             </div>
@@ -361,7 +379,7 @@
 
                 <div class="testimonial__card swiper-slide">
                     <div class="testimonial__quote">
-                        <!-- <i class='bx bxs-quote-left'></i> -->
+                       
                     </div>
                     <p class="testimonial__description">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint vitae hic, similique beatae
@@ -382,7 +400,7 @@
             <div class="swiper-pagination"></div>
         </div>
     </section>
-    <section class="contact" id="contact">
+    <section class="hidden contact" id="contact">
         <h2 data-heading="Get in touch" class="section__title">Contact Me</h2>
         <div class="contact__container container grid">
             <div class="contact__content">
@@ -438,7 +456,7 @@
                         <label for="">message</label>
                         <span>Message</span>
                     </div>
-                    <button type="submit" class="button"><i class="uil uil-navigator button__icon"></i>
+                    <button type="submit" class="main-btn button"><i class="uil uil-navigator button__icon"></i>
                         Send Message
                     </button>
                 </form>
@@ -448,11 +466,7 @@
 
     <footer class="footer">
         <div class="footer__bg">
-            <div class="footer__container container ">
-                <div>
-                    <span class="footer__subtitle">Front-end Developer</span>
-                    <h1 class="footer__title">ACWD</h1>
-                </div>
+            <div class="footer__container  ">
                 <ul class="footer__links">
                     <li>
                         <a href="#about" class="footer__link">About</a>
@@ -467,6 +481,10 @@
                         <a href="#contact" class="footer__link">Contact</a>
                     </li>
                 </ul>
+                <div>
+                    <span class="footer__subtitle">Front-end Developer</span>
+                    <h1 class="footer__title">ACWD</h1>
+                </div>
 
                 <div class="footer__socials">
                     <a href="https://www.facebook.com/" target="_blank" class="footer__social">
@@ -487,9 +505,10 @@
     <!-- BOXICONS -->
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <!--SWIPER JS-->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!--MAIN JS-->
     <script src="./js/script.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
 </body>
 
 </html>

@@ -18,3 +18,11 @@
         color:ut.$color-2;
     }
 }
+
+/* prueba para aniamcion */
+section{
+    display: grid;
+    place-items:center;
+    align-content: center;
+    min-height: 100vh;
+}

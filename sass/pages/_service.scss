@@ -1,20 +1,23 @@
 @use "../utils/index" as ut;
 
 .services {
-    margin-bottom: map-get(ut.$sizing, "3xl");
-    
-    &__card {
+  margin-bottom: map-get(ut.$sizing, "3xl");
+  &.container {
+    width: 100%;
+    border: 1px solid white;
+  }
+  &__card {
     background: ut.$color-1;
     border-bottom: 1px solid ut.$color-6;
     /*   width: 80%; */
     height: 100px;
     display: flex;
     align-items: center;
-    &:first-child{
-        border-radius: 10px 10px 0 0;
+    &:first-child {
+      border-radius: 10px 10px 0 0;
     }
-    &:last-child{
-        border-radius: 0 0 10px 10px ;
+    &:last-child {
+      border-radius: 0 0 10px 10px;
     }
     .num {
       width: 10%;
