@@ -1,54 +1,88 @@
-@use '../utils/index' as mix;
+@use "../utils/index" as ut;
+li {
+  list-style: none;
+}
 
+a {
+  text-decoration: none;
+}
+
+/* css to reset all the designs */
+
+/* add styles on elements */
 .header {
-  @include mix.navbar-height;
-  background-color: #1b30395e;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px 20px;
-  color: white;
-  
-  &__logo {
-    cursor: pointer;
-    .enlace {
-      &__img {
-        height: 50px;
-        width: auto;
-        background-color: red;
-        border-radius: 30px;
+  border-bottom: 1px solid #e2e8f0;
+  background-color: rgba(34, 34, 34, 0.541);
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem 1.5rem;
+
+    .nav-logo {
+      .logo-img {
+        width: 50px;
       }
     }
-  }
-  &__nav {
-    .nav__list {
-      list-style: none;
-      .item {
-        display: inline-block;
-        padding: 0 20px;
-        a {
-          color: red;
-          font-size: 700;
-          color: #eceff1;
-          text-decoration: none;
-          @include mix.transition;
+
+    .nav-menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .nav-item {
+        margin-left: 2rem;
+
+        .nav-link {
+          font-size: 1.5rem;
+          font-weight: 600;
+          color: ut.$color-6;
+          transition: 0.2s ease-out all;
+
           &:hover {
-            color: mix.$color-6;
-            border-bottom:1px solid mix.$color-6;
+            color: #482ff7;
           }
         }
       }
     }
-  }
-  &__social{
-    display:flex;
-    &--a{
-      padding:0 5px;
-      text-decoration: none;
-      img{
-        height:30px;
-        background-color: white;
+
+    .hamburger {
+      display: none;
+
+      @media only screen and (max-width: 768px) {
+        display: block;
+        cursor: pointer;
+        font-size: 40px;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      .nav-menu {
+        justify-content: center;
+        position: fixed;
+        z-index: 2;
+        left: 100%;
+        top: 2rem;
+        width: 100%;
+        height: 90vh;
+        flex-direction: column;
+        background-color: rgb(0, 0, 0);
+        border-radius: 5px;
+        text-align: center;
+        transition: left 0.3s ease;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+      }
+
+      .nav-menu.active {
+        left: 0;
+      }
+
+      .nav-item {
+        margin: 2.5rem 0;
       }
     }
   }
 }
+
+/* add styles on elements */

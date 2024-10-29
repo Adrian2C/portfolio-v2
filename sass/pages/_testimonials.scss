@@ -1,61 +1,67 @@
 @use "../utils/index" as ut;
-
+.testimonials {
+  border:1px solid ut.$btn-1;
+}
 .testimonials__container {
   margin-bottom: map-get(ut.$sizing, "lg");
+  width: 90vw;
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 768px) {
     width: 750px;
     margin-left: auto !important;
     margin-right: auto !important;
   }
+  .testimonial__card {
+    /* background-blend-mode: ut.$color-2; */
+    background: ut.$color-1;
+    padding: 1.8rem 2rem;
+    border-radius: 0.5rem;
+    border-bottom: 3rem;
+
+    .testimonial__quote {
+      display: inline-flex;
+      font-size: 1.5rem;
+      color: ut.$color-3;
+      margin-bottom: map-get(ut.$sizing, "lg");
+    }
+    .testimonial__description {
+      margin-bottom: map-get(ut.$sizing, "lg");
+      font-size: map-get(ut.$sizing, "lg");
+      /* @media screen and (max-width:768px){
+        margin:0 15px;
+      } */
+    }
+    .testimonial__date {
+      font-size: map-get(ut.$sizing, "md");
+      margin-bottom: map-get(ut.$sizing, "3xl");
+    }
+    .testimonial__profile {
+      display: flex;
+      align-items: center;
+      column-gap: 1rem;
+    }
+    .testimonial__profile-img {
+      width: 60px;
+      height: 60px;
+      border-radius: 3rem;
+    }
+    .testimonial__profile-data {
+      display: flex;
+      flex-direction: column;
+      row-gap: 0.4rem;
+    }
+    .testimonial__profile-name {
+      font-size: map-get(ut.$sizing, "xl");
+      font-weight: 600;
+      color: ut.$color-4;
+    }
+    .testimonial__profile-detail {
+      font-size: map-get(ut.$sizing, "lg");
+      display: block;
+    }
+  }
 }
 
-.testimonial__card {
-  /* background-blend-mode: ut.$color-2; */
-  background: ut.$color-1;
-  padding: 1.8rem 2rem;
-  border-radius: 0.5rem;
-  border-bottom: 3rem;
-
-  .testimonial__quote {
-    display: inline-flex;
-    font-size: 1.5rem;
-    color: ut.$color-3;
-    margin-bottom: map-get(ut.$sizing, "lg");
-  }
-  .testimonial__description {
-    margin-bottom: map-get(ut.$sizing, "lg");
-    font-size: map-get(ut.$sizing, "lg");
-  }
-  .testimonial__date {
-    font-size: map-get(ut.$sizing, "md");
-    margin-bottom: map-get(ut.$sizing, "3xl");
-  }
-  .testimonial__profile {
-    display: flex;
-    align-items: center;
-    column-gap: 1rem;
-  }
-  .testimonial__profile-img {
-    width: 60px;
-    height: 60px;
-    border-radius: 3rem;
-  }
-  .testimonial__profile-data {
-    display: flex;
-    flex-direction: column;
-    row-gap: 0.4rem;
-  }
-  .testimonial__profile-name {
-    font-size: map-get(ut.$sizing, "xl");
-    font-weight: 600;
-    color: ut.$color-4;
-  }
-  .testimonial__profile-detail {
-    font-size: map-get(ut.$sizing, "lg");
-    display: block;
-  }
-}
 /* Swiper Class */
 /* .swiper {
   width: 600px;
@@ -63,5 +69,5 @@
 } */
 
 .swiper-pagination-bullet {
-  background: ut.$color-6!important;
+  background: ut.$color-6 !important;
 }

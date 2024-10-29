@@ -1,28 +1,30 @@
-@use '../utils/index' as  ut;
+@use "../utils/index" as ut;
 
-.section__title{
-    text-align: center;
-    font-size: map-get(ut.$spacing, "4xl");
-    margin-bottom: map-get(ut.$sizing, "3xl");
-    background-image: linear-gradient(ut.$btn-1, white);
-    color: transparent;
-    background-clip: text;
-    
-    
-    &::after{
-        content:attr(data-heading);
-        display:block;
-        font-size: map-get(ut.$spacing,"lg");
-        font-weight: 300;
-        /* color:var(--skin-color); */
-        color:ut.$color-2;
-    }
+.section__title {
+  text-align: center;
+  font-size: clamp(2.813rem, 4.373vw + 1.651rem, 3.75rem);
+  margin-bottom: map-get(ut.$sizing, "3xl");
+  background-image: linear-gradient(ut.$btn-1, white);
+  color: transparent;
+  background-clip: text;
+  /* border:1px solid white; */
+  margin: 20px 20px;
+
+  &::after {
+    content: attr(data-heading);
+    display: block;
+    font-size: map-get(ut.$spacing, "lg");
+    font-weight: 300;
+    color: ut.$color-2;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
 }
 
 /* prueba para aniamcion */
-section{
-    display: grid;
-    place-items:center;
-    align-content: center;
-    min-height: 100vh;
+section {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: 100vh;
 }

@@ -1,18 +1,27 @@
 @use "../utils/index" as ut;
 
 .footer {
+  margin-top:120px;
   &__bg {
     margin-bottom: 0;
     background-color: ut.$color-1; /*se le da el color*/
-    border-top: 1px solid ut.$color-5;
+    border-top: 1px solid ut.$btn-1;
     .footer__container {
+      /* border: 1px solid white; */
       .footer__title {
         margin-top: 0;
+
         font-size: map-get(ut.$spacing, "7xl");
+        /* font-size: clamp(7.5em, 10vw + 1em, 15em); */
         letter-spacing: 20px;
         text-align: center;
         margin-bottom: map-get(ut.$sizing, "md");
-        border-bottom: 1px solid ut.$color-6;
+        /* border-bottom: 1px solid ut.$color-6; */
+        font-size: clamp(6.25rem, 18.919vw + 0.338rem, 15rem);
+        @media screen and (max-width: 768px) {
+          /*  border:1px solid white; */
+          text-align: center;
+        }
       }
       .footer__subtitle {
         font-size: map-get(ut.$spacing, "xl");
@@ -20,42 +29,51 @@
         margin-top: 1.25rem;
         text-align: center;
         letter-spacing: 10px;
+        /*  @media screen and (max-width: 768px) {
+          border-bottom: 1px solid ut.$btn-1;
+          border-top: 1px solid ut.$btn-1;
+        } */
       }
-      
+
       .footer__links {
+        border-bottom: 1px solid ut.$btn-1;
         display: flex;
         list-style: none;
         justify-content: space-evenly;
         margin: auto;
-        .footer__link:hover {
-          color: ut.$color-6; 
+
+        .footer__link {
+          @media screen and (max-width: 768px) {
+            display: block;
+            /* border: 1px solid white; */
+            padding:10px;
+          }
+          &:hover {
+            color: ut.$color-2;
+          }
+        }
+        @media screen and (max-width: 768px) {
+          display: block;
+          /*  flex-direction: column;*/
+          text-align: center;
+          padding:0;
         }
       }
     }
-  }
-}
-.footer__socials {
-  display: flex;
-  margin: auto;
-  justify-content: center;
-  padding-top: 30px;
-  .footer__social {
-    font-size: 2rem;
-    margin-right: map-get(ut.$sizing, "xl");
-    &:hover {
-      color: ut.$color-6;
+    .footer__copy {
+      font-size: map-get(ut.$spacing, "lg");
+      text-align: center;
+      padding: 10px 0;
+
+      border-bottom: 1px solid ut.$btn-1;
+      border-top: 1px solid ut.$btn-1;
     }
   }
 }
-.footer__copy {
-  font-size: map-get(ut.$spacing, "lg");
-  text-align: center;
-  padding: 10px 0;
-  border-top: 1px solid ut.$color-6;
-}
+
 .footer__title,
 .footer__subtitle,
 .footer__link,
-.footer__social {
-  color: ut.$color-5;
+.footer__copy {
+  color: ut.$btn-1;
 }

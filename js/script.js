@@ -101,3 +101,5 @@ inputs.forEach((input) => {
   ); /*hasta aca hace que al seleccionar el input para escribir, eel placeholder se suba y quede tachado */
   input.addEventListener("blur", blurFunc);
 });
+
+

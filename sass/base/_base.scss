@@ -31,8 +31,10 @@ body {
 }
 
 a {
+  /* font-size: .5rem; */
   color: ut.$text-color;
   text-decoration: none;
+  /* font-size: clamp(2rem, 1.2857142857142856rem + 3.0476190476190474vw, 3rem); */
 }
 
 /* A elements that don't have a class get default styles */
