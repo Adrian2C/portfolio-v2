@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Desarrollador web front-end experto en JavaScript, CSS, Sass y diseño responsive. Crea sitios web únicos y optimizados para tu negocio. Descubre mis proyectos y contacta para llevar tu negocio al mundo digital. ¡Haz crecer tu presencia online hoy mismo!">
+
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -16,38 +19,34 @@
 </head>
 
 <body data-scroll-container>
-    <!-- <header class="header">
+    <header class="header" id="header">
         <nav class="navbar">
             <div class="logo">
-                <a href="#main"class="nav-logo">
-                    <img class="logo-img" src="./sass/assets/acwd.png" alt="Logo">
+                <a href="#main" class="nav-logo">
+                    <img class="logo-img" src="./sass/assets/acwd.webp" alt="Logo">
                 </a>
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Home</a>
+                    <a href="#main" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">About</a>
+                    <a href="#about" class="nav-link">Sobre Mi</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Projects</a>
+                    <a href="#works" class="nav-link">Projectos</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Contact</a>
+                    <a href="#contact" class="nav-link ">Contacto</a>
                 </li>
             </ul>
             <div class="hamburger">
                 <i class='bx bx-menu'></i>
             </div>
         </nav>
-    </header> -->
+    </header>
 
-    <!-- <main data-scroll-section class="main " id="main">
-        <video class="main_video" id="background-video" autoplay loop muted
-            poster="https://assets.codepen.io/6093409/river.jpg">
-            <source src="./sass/assets/Main-bg.mp4" type="video/mp4">
-        </video>
+    <main data-scroll-section class="main " id="main">
         <div class="main__container">
             <div class="main__container--me">
                 <h2>Adrian Coceres</h2>
@@ -66,28 +65,23 @@
                 </div>
             </div>
         </div>
-        <div class="contenedor-btn">
-            <a href="#experience" aria-label="Scroll" class="scroll-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                        d="M13.0001 16.1716L18.3641 10.8076L19.7783 12.2218L12.0001 20L4.22192 12.2218L5.63614 10.8076L11.0001 16.1716V4H13.0001V16.1716Z">
-                    </path>
-                </svg>
-            </a>
-        </div>
-    </main> -->
+        <video class="main_video" id="background-video" autoplay loop muted>
+            <source src="./sass/assets/Main-bg.mp4" type="video/mp4">
+        </video>
+        <div class="capa"></div>
+    </main>
 
-    <!-- <div class="slider">
+    <div class="slider">
         <div class="list">
             <div class="item" style="--position: 1">
                 <img src="./sass/assets/html5.svg" alt="">
                 <img src="./sass/assets/css3.svg" alt="">
             </div>
             <div class="item" style="--position: 2">
-                <img src="./sass/assets/word.png" alt="">
+                <img src="./sass/assets/word.webp" alt="">
             </div>
             <div class="item" style="--position: 3">
-                <img src="./sass/assets/Javascript.png" alt="">
+                <img src="./sass/assets/Javascript.webp" alt="">
             </div>
             <div class="item" style="--position: 4">
                 <img src="./sass/assets/sass.svg" alt="">
@@ -96,44 +90,53 @@
                 <img src="./sass/assets/figma.svg" alt="">
             </div>
             <div class="item" style="--position: 6">
-                <img src="./sass/assets/ux.png" alt="">
+                <img src="./sass/assets/ux.webp" alt="">
             </div>
             <div class="item" style="--position: 7">
                 <img src="./sass/assets/github (1).svg" alt="">
             </div>
             <div class="item" style="--position: 8">
-                <img src="./sass/assets/sql.png" alt="">
+                <img src="./sass/assets/sql.webp" alt="">
             </div>
             <div class="item" style="--position: 9">
-                <img src="./sass/assets/btsp.png" alt="">
+                <img src="./sass/assets/btsp.webp" alt="">
             </div>
             <div class="item" style="--position: 10">
-                <img src="./sass/assets/fire.png" alt="">
+                <img src="./sass/assets/fire.webp" alt="">
             </div>
         </div>
     </div>
+
     <div class="number" id="experience">
-        <div class="number__container"> -->
-    <!-- <p class="number__container--num">1</p>
-            <p class="number__container--tx">Año de experiencia</p> -->
-    <!-- <p class="number__container--num ocultar" data-cantidad-total="10">0</p>
-            <p class="number__container--tx">proyectos completados</p>
-            <p class="number__container--num ocultar" data-cantidad-total="5">0</p>
-            <p class="number__container--tx">clientes satisfechos</p>
-            <p class="number__container--num ocultar" data-cantidad-total="20">0</p>
-            <p class="number__container--tx">diseños realizados</p>
+        <div class="number__container ">
+            <div class="num-block ">
+                <p class="number__container--num" data-cantidad-total="2">0</p>
+                <p class="number__container--tx">Años de experiencia</p>
+            </div>
+            <div class="num-block ">
+                <p class="number__container--num ocultar" data-cantidad-total="10">0</p>
+                <p class="number__container--tx">proyectos completados</p>
+            </div>
+            <div class="num-block ">
+                <p class="number__container--num ocultar" data-cantidad-total="5">0</p>
+                <p class="number__container--tx">clientes satisfechos</p>
+            </div>
+            <div class="num-block ">
+                <p class="number__container--num ocultar" data-cantidad-total="20">0</p>
+                <p class="number__container--tx">diseños realizados</p>
+            </div>
         </div>
-    </div> -->
+    </div>
 
-     <section class="hidden about " id="about">
-        <h2 data-heading="I design and code beautifully simple things and i love what i do. Just simple like that!"
-            class="section__title">About me</h2>
+    <section class=" about " id="about">
+        <h2 data-heading="Diseño y Desarrollo codigo simple, funcional pero con resultados creativos, y me encanta hacerlo!"
+            class="section__title hidden">Sobre mi</h2>
 
-        <div class="about__container container grid">
-            <img src="./sass/assets/developer.png" class="about__img">
+        <div class="about__container container grid hidden">
+            <img src="./sass/assets/developer.webp" alt="imagen descriptiva para la seccion sobre mi"class="about__img">
 
             <div class="about__data">
-                <h3 class="about__heading">Hi, I'm Adrian Coceres, Desde Argentina</h3>
+                <h3 class="about__heading">Hola!, Soy Adrian Coceres, Desde Argentina</h3>
                 <p class="about__description">Soy desarrollador web, especializado en el Front-end. Cuento con
                     experiencia y estudios especializados en diferentes tecnologias de desarrollo web, y diseño UX/UI,
                     para un trabajo mas especializado</p>
@@ -141,29 +144,29 @@
 
                     <div class="about__box">
                         <i class="uil uil-award about__icon"></i>
-                        <h3 class="about__title">10 Clients</h3>
-                        <span class="about__subtitle">Satisfied</span>
+                        <h3 class="about__title">10 Clientes</h3>
+                        <span class="about__subtitle">Satisfechos</span>
                     </div>
 
                     <div class="about__box">
                         <i class="uil uil-suitcase-alt about__icon"></i>
-                        <h3 class="about__title">Completed</h3>
-                        <span class="about__subtitle">10 + Projects</span>
+                        <h3 class="about__title">Completados</h3>
+                        <span class="about__subtitle">10 + Projectos</span>
                     </div>
 
                     <div class="about__box">
                         <i class="uil uil-headphones-alt about__icon"></i>
-                        <h3 class="about__title">Support</h3>
+                        <h3 class="about__title">Soporte</h3>
                         <span class="about__subtitle">Online 24/7</span>
                     </div>
                 </div>
                 <a href="#contact" class="second-btn button"><i class="uil uil-navigator button__icon"></i>
-                    Contact Me</a>
+                    Contactame</a>
             </div>
         </div>
     </section>
-    <!--<section class=" services" id="services">
-        <h2 data-heading="Tus ideas y proyectos en un sitio que inspire y atraiga" class="section__title">What I offer
+    <section class=" services" id="services">
+        <h2 data-heading="Tus ideas y proyectos en un sitio que inspire y atraiga" class="section__title">Que ofresco
         </h2>
 
         <div class=" services_container ">
@@ -217,10 +220,11 @@
         </div>
     </section>
     <section class=" works" id="works">
-        <h2 data-heading="Sueños plasmados y entregados a clientes satisfechos" class="section__title">Recent Works</h2>
+        <h2 data-heading="Sueños plasmados y entregados a clientes satisfechos" class="section__title">Mis Ultimos
+            trabajos</h2>
         <div class="works__container grid">
             <div class="works__card">
-                <img src="./sass/assets/marian portfolio.png" alt="Mis trabajos">
+                <img src="./sass/assets/marian portfolio.webp" alt="Mis trabajos">
                 <div class="works__card-title">
                     <p>titulo #1</p>
                 </div>
@@ -248,7 +252,7 @@
                 </div>
             </div>
             <div class="works__card">
-                <img src="./sass/assets/blog victor robles.png" alt="Mis trabajos">
+                <img src="./sass/assets/blog victor robles.webp" alt="Mis trabajos">
                 <div class="works__card-title">
                     <p>titulo #1</p>
                 </div>
@@ -262,7 +266,7 @@
                 </div>
             </div>
             <div class="works__card">
-                <img src="./sass/assets/image.png" alt="Mis trabajos">
+                <img src="./sass/assets/image.webp" alt="Mis trabajos">
                 <div class="works__card-title">
                     <p>titulo #1</p>
                 </div>
@@ -279,12 +283,12 @@
     </section>
 
     <section class=" qualification" id="education">
-        <h2 data-heading="the Journey to be who am I" class="section__title">Education</h2>
+        <h2 data-heading="El camino a quien soy" class="section__title">Educacion</h2>
         <div class="qualification__container grid ">
             <div class="education">
                 <h3 class="qualification__title">
                     <i class="uil uil-graduation-cap"></i>
-                    Education
+                    Educacion
                 </h3>
 
                 <div class="timeline">
@@ -317,8 +321,8 @@
             </div>
             <div class="experience">
                 <h3 class="qualification__title">
-                    <i class="uil uil-briefcase"></i>
-                    Experience
+                    <i class="uil uil-graduation-cap"></i>
+
                 </h3>
 
                 <div class="timeline">
@@ -352,7 +356,7 @@
 
     <section class="testimonials" id="testimonial">
         <h2 data-heading="Empoderando a las personas en una nueva era digital con mis servicios" class="section__title">
-            Testimonials</h2>
+            Testimonios</h2>
 
         <div class="testimonials__container  grid swiper">
             <div class="swiper-wrapper">
@@ -418,56 +422,49 @@
     </section>
 
 
-    <section class="hidden contact" id="contact">
-        <h2 data-heading="Get in touch" class="section__title">Contact Me</h2>
-        <div class="contact__container container grid">
+    <section class=" contact">
+        <h2 data-heading="Pongamonos en contacto" id="contact" class="section__title hidden">Contactame</h2>
+        <div class="contact__container container grid hidden">
             <div class="contact__content">
                 <div class="contact__info">
                     <div class="contact__card">
                         <i class="uil uil-envelope-edit contact__card-icon"></i>
                         <h3 class="contact__card-title">Email</h3>
                         <span class="contact__card-data">adriancoceres.93@gmail.com</span>
-                        <span class="contact__button">
-                            <a href="">Write me</a> <i class="uil uil-arrow-right contact__button-icon"></i>
-                        </span>
                     </div>
 
                     <div class="contact__card">
                         <i class="uil uil-whatsapp contact__card-icon"></i>
                         <h3 class="contact__card-title">Whatsapp</h3>
                         <span class="contact__card-data">11-3573-0320</span>
-                        <span class="contact__button">
-                            <a href="">Write me</a> <i class="uil uil-arrow-right contact__button-icon"></i>
-                        </span>
                     </div>
-
                 </div>
             </div>
 
             <div class="contact__content">
                 <form action="" class="contact__form">
                     <div class="input__container">
-                        <input type="text" class="input">
-                        <label for="">Username</label>
-                        <span>Username</span>
+                        <input type="text" class="input" id="name">
+                        <label for="">Nombre</label>
+                        <span>Nombre</span>
                     </div>
                     <div class="input__container">
-                        <input type="email" class="input">
+                        <input type="email" class="input" id="email">
                         <label for="">Email</label>
                         <span>Email</span>
                     </div>
                     <div class="input__container">
-                        <input type="tel" class="input">
-                        <label for="">Phone</label>
-                        <span>Phone</span>
+                        <input type="tel" class="input" id="phone">
+                        <label for="">Numero</label>
+                        <span>Numero</span>
                     </div>
                     <div class="input__container textarea">
-                        <textarea name="" id="" class="input"></textarea>
-                        <label for="">message</label>
-                        <span>Message</span>
+                        <textarea name="" id="message" class="input" autocomplete="off"></textarea>
+                        <label for="">Mensaje</label>
+                        <span>Mensaje</span>
                     </div>
                     <button type="submit" class="main-btn button"><i class="uil uil-navigator button__icon"></i>
-                        Send Message
+                        Enviar
                     </button>
                 </form>
             </div>
@@ -478,16 +475,16 @@
             <div class="footer__container">
                 <ul class="footer__links">
                     <li>
-                        <a href="#about" class="footer__link">About</a>
+                        <a href="#about" class="footer__link">Acerca de mi</a>
                     </li>
                     <li>
-                        <a href="#services" class="footer__link">Services</a>
+                        <a href="#services" class="footer__link">Servicios</a>
                     </li>
                     <li>
-                        <a href="#work" class="footer__link">Portfolio</a>
+                        <a href="#works" class="footer__link">Portfolio</a>
                     </li>
                     <li>
-                        <a href="#contact" class="footer__link">Contact</a>
+                        <a href="#contact" class="footer__link">Contacto</a>
                     </li>
                 </ul>
                 <div>
@@ -498,7 +495,7 @@
 
             <p class="footer__copy"> Adrian Coceres Web Design // ACWD. &#169; All Right Reserved</p>
         </div>
-    </footer> -->
+    </footer>
 
 
     <!-- BOXICONS -->
@@ -509,7 +506,13 @@
     <script src="./js/script.js"></script>
     <!-- NAVBAR js -->
     <script src="./js/navbar.js"></script>
+    <!-- Mailing -->
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <!-- scrollreveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- sweet alert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

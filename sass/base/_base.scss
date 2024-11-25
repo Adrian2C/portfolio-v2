@@ -16,7 +16,11 @@ body {
   line-height: 1.5;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  background: linear-gradient(180deg, rgba(92,0,122,1) 0%, rgba(31,0,40,1) 46%, rgba(16,0,21,1) 100%);
+  /* background: linear-gradient(180deg, rgb(0, 123, 145) 0%, rgb(0, 88, 84) 46%, rgb(0, 20, 21) 100%); */
+  /* background: linear-gradient(180deg, ut.$btn-2 0%, ut.$color-1 46%, ut.$black 100%); */
+  background: ut.$bg-color;
+  /* background: linear-gradient(180deg, rgba(92,0,122,1) 0%, rgba(31,0,40,1) 46%, rgba(16,0,21,1) 100%); */
+ /*  overflow-x: hidden; */
 }
 /**
  * Make all elements from the DOM inherit from the parent box-sizing

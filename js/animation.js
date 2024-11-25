@@ -8,19 +8,8 @@ ScrollReveal({
   delay: 300
 });
 
-ScrollReveal().reveal('.main__container--me h1', {
-  delay: 400,
-  origin: 'left'
-});
-ScrollReveal().reveal('.main__container--me h2', {
-  delay: 500,
-  origin: 'right'
-});
-ScrollReveal().reveal('.main__container--me p', {
-  delay: 600,
-  origin: 'bottom'
-});
-ScrollReveal().reveal('.me__contact .button', {
+
+ScrollReveal().reveal('.me__contact', {
   delay: 600,
   origin: 'bottom',
   interval: 200,

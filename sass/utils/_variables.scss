@@ -8,41 +8,41 @@ $text-font: "Oxanium", sans-serif;
 //second font
 $sora-font: "Sora", sans-serif;
 
-//main color
-
-/// Copy text color
-/* $text-color: rgb(117, 0, 136); */
-
 //background-color
-$bg-color: rgb(55, 0, 64);
+/* $bg-color: rgb(55, 0, 64); */
+$bg-color: rgb(0, 51, 64);
 
 //Secondary color
-$secondary-color:rgb(129,76,236);
+/* $secondary-color: rgb(129, 76, 236); */
+$secondary-color:rgb(76, 236, 228);
 
-/// Light grey
+//text-color
 $text-color: rgb(213, 213, 213);
 
-/// Medium grey
-$mid-grey: rgb(217, 217, 217);
-
-/// Dark grey
-$dark-grey: rgb(165, 165, 165);
 
 
 //neutral
-$black:#000000;
-$white:#ffffff;
+$black: #000000;
+$white: #ffffff;
 //font
-$color-1:#1c0d27;
+/* $color-1:#1c0d27;
 $color-2:#dddddd;
-$color-3:#9b9b9b;
-$color-4:#8750f7;
+$color-3:#9b9b9b; 
+ $color-4:#8750f7;
 $color-5:#814cec;
-$color-6:#f119d5;
+$color-6:#f119d5; */
+$color-1: #0d2725;
+$color-2: #dddddd;
+$color-3: #9b9b9b;
+$color-4: #50f7ef;
+$color-5: #4cece4;
+$color-6: #19f1f1;
 
 //button
-$btn-1:#b21ded;
-$btn-2:#750088;
+$btn-1: #1de6ed;
+$btn-2: #008888;
+/* $btn-1:#b21ded;
+$btn-2:#750088; */
 
 /// Container's maximum width
 $max-width: 64rem;
@@ -51,14 +51,14 @@ $max-width: 64rem;
 $navbar-heights: (
   "desktop": 80px,
   "tablet": 70px,
-  "mobile": 60px
+  "mobile": 60px,
 );
 
 $breakpoints: (
   "small": 320px,
   "medium": 768px,
   "large": 1024px,
-/*   "xlarge": 1280px, */
+  /*   "xlarge": 1280px, */
 );
 
 /// Spacing map - non text

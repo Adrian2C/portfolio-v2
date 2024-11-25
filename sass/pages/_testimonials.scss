@@ -1,7 +1,5 @@
 @use "../utils/index" as ut;
-.testimonials {
-  border:1px solid ut.$btn-1;
-}
+
 .testimonials__container {
   margin-bottom: map-get(ut.$sizing, "lg");
   width: 90vw;
@@ -12,7 +10,6 @@
     margin-right: auto !important;
   }
   .testimonial__card {
-    /* background-blend-mode: ut.$color-2; */
     background: ut.$color-1;
     padding: 1.8rem 2rem;
     border-radius: 0.5rem;
@@ -27,9 +24,6 @@
     .testimonial__description {
       margin-bottom: map-get(ut.$sizing, "lg");
       font-size: map-get(ut.$sizing, "lg");
-      /* @media screen and (max-width:768px){
-        margin:0 15px;
-      } */
     }
     .testimonial__date {
       font-size: map-get(ut.$sizing, "md");
@@ -61,13 +55,6 @@
     }
   }
 }
-
-/* Swiper Class */
-/* .swiper {
-  width: 600px;
-  height: 300px;
-} */
-
 .swiper-pagination-bullet {
   background: ut.$color-6 !important;
 }

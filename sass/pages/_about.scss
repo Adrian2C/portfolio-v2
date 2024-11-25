@@ -1,5 +1,7 @@
 @use "../utils/index" as ut;
-
+.about{
+  background: ut.$color-1;
+}
 .about__container {
   grid-template-columns: repeat(2, 1fr);
   column-gap: 4rem;
@@ -8,41 +10,71 @@
   padding: map-get(ut.$sizing, "xl");
   margin-bottom: map-get(ut.$sizing, "md");
   @include ut.border-radius(15px);
+
+  @media screen and (max-width: 768px) {
+    column-gap: 0;
+  }
   .about__img {
     width: 480px;
     @include ut.border-radius(12px);
     justify-self: center;
-  }
 
-  .about__heading {
-    font-size: map-get(ut.$sizing, "xl");
-    margin-bottom: map-get(ut.$sizing, "md");
+    @media screen and (max-width: 500px) {
+      display: none;
+    }
   }
-  .about__description {
-    text-align: justify;
-    padding-right: 6rem;
-    margin-bottom: map-get(ut.$sizing, "3xl");
-  }
+  .about__data {
+    @media screen and (max-width: 768px) {
+      margin-bottom: map-get(ut.$sizing, "xxl");
+    }
 
-  .about__info {
-    grid-template-columns: repeat(3, 140px);
-    column-gap: 0.5rem;
-    margin-bottom: map-get(ut.$sizing, "4xl");
-    .about__box {
-      text-align: center;
-      @include ut.border-radius(4px);
-      padding: 1rem 1.25rem;
-      background-color: ut.$black;
-      .about__icon {
-        font-size: 1.5rem;
-        color: ut.$color-6;
-        margin-bottom: map-get(ut.$sizing, "md");
+    .about__heading {
+      font-size: map-get(ut.$sizing, "xl");
+      margin-bottom: map-get(ut.$sizing, "md");
+      @media screen and (max-width: 768px) {
+        text-align: center;
       }
-      .about__title {
-        font-size: map-get(ut.$sizing, "lg");
+    }
+    .about__description {
+      text-align: justify;
+      padding-right: 6rem;
+      margin-bottom: map-get(ut.$sizing, "3xl");
+
+      @media screen and (max-width: 768px) {
+        padding-right: 1rem;
       }
-      .about__subtitle {
-        font-size: map-get(ut.$sizing, "md");
+    }
+
+    .about__info {
+      grid-template-columns: repeat(3, 140px);
+      column-gap: 0.5rem;
+      margin-bottom: map-get(ut.$sizing, "4xl");
+
+      @media screen and (max-width: 500px) {
+        margin-bottom: 2rem;
+      }
+
+      .about__box {
+        text-align: center;
+        @include ut.border-radius(4px);
+        padding: 1rem 1.25rem;
+        background-color: ut.$black;
+        border: 1px solid ut.$btn-1;
+        /* @media screen and (max-width: 768px) {
+          padding: 1px .5008px;
+        } */
+
+        .about__icon {
+          font-size: 1.5rem;
+          color: ut.$color-6;
+          margin-bottom: map-get(ut.$sizing, "md");
+        }
+        .about__title {
+          font-size: map-get(ut.$sizing, "lg");
+        }
+        .about__subtitle {
+          font-size: map-get(ut.$sizing, "md");
+        }
       }
     }
   }

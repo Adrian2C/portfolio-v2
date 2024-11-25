@@ -1,6 +1,5 @@
 @use '../utils/index' as u;
 
-@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Sora:wght@100..800&display=swap');
 
 /**
@@ -9,4 +8,7 @@
 body {
   color: u.$text-color;
   font: normal 125% / 1.4 u.$text-font;
+}
+h1,h2{
+  font: normal 125% / 1.4 u.$sora-font;
 }

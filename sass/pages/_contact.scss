@@ -1,7 +1,7 @@
 @use "../utils/index" as ut;
-/* .contact{
-  margin:50px 0;
-} */
+.contact{
+  background: ut.$bg-color;
+}
 .contact__container {
   grid-template-columns: 300px 340px; /* crea dos columnas para que esten separadas las dos partes de contacto*/
   column-gap: 3rem;

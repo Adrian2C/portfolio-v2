@@ -1,45 +1,47 @@
 @use "../utils/index" as ut;
 .button {
   font-weight: 700;
-  color: ut.$text-color;
-  padding: 9px 25px;
+
+  padding: 9px 10px;
   border: none;
   cursor: pointer;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   transition: all 0.5s ease;
-  
+
   &:hover {
-    -webkit-box-shadow: 0px 0px 22px 6px rgba(224, 27, 224, 0.44);
-    -moz-box-shadow: 0px 0px 22px 6px rgba(224, 27, 224, 0.44);
-    box-shadow: 0px 0px 22px 6px rgba(219, 127, 219, 0.44);
-    
+    -webkit-box-shadow: 0px 0px 22px 6px rgba(27, 152, 224, 0.44);
+    -moz-box-shadow: 0px 0px 22px 6px rgba(27, 152, 224, 0.44);
+    box-shadow: 0px 0px 22px 6px rgba(127, 182, 219, 0.44);
   }
-  &:active{
+  &:active {
     letter-spacing: 3px;
-  box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
-  transform: translateY(10px);
-  transition: 1s;
+    box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 1s;
   }
 }
 .main-btn {
   background: linear-gradient(to right, ut.$btn-1, ut.$btn-2);
-  width:250px;
+  width: 200px;
   border-radius: 10px;
-  @media screen and (max-width:1000px){
+
+  @media screen and (max-width: 768px) {
     width: 100%;
   }
 }
 .second-btn {
-  background-color:transparent;
-  border:1px solid rgba(128, 128, 128, 0.459);
+  background-color: transparent;
+  border: 1px solid rgba(128, 128, 128, 0.459);
   border-radius: 10px;
+  color: ut.$color-2;
 }
 
 .contenedor-btn {
-  width: 90vw;
-  margin: -50px auto;
-  margin-left: 50px;
+  width: 100vw;
+  margin: -100px auto;
   text-align: center;
+/*   border: 1px solid pink; */
+
   .scroll-btn {
     inline-size: 3rem;
     block-size: 3rem;
