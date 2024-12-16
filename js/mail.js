@@ -5,6 +5,7 @@ const phone = document.getElementById("phone");
 /* const subject = document.getElementById("subject"); */
 const mess = document.getElementById("message");
 
+/* -------=====SMTPJS====---------- */
 function sendEmail() {
   const bodyMessage = `Nombre: ${fullName.value} <br> Email:${email.value}<br>Numero: ${phone.value}<br> Dice:" ${mess.value}"`;
 
@@ -12,7 +13,7 @@ function sendEmail() {
     SecureToken: "6d60719a-5308-4ad6-8d0a-7a6fb97cd28e",
     To: "adriancoceres.93@gmail.com",
     From: "adriancoceres.93@gmail.com",
-    Subject: subject.value,
+    /* Subject: subject.value, */
     Body: bodyMessage,
   }).then((message) => {
     if (message == "OK") {
@@ -51,7 +52,7 @@ function checkInputs() {
     });
   }
 }
-
+/* CHECKMAIL FUNCTION */
 function checkEmail() {
   const emailRegex = /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,3})(\.[a-z]{2,3})?$/;
   const errorTxtEmail = document.querySelector(".error-txt.email");
@@ -76,7 +77,7 @@ form.addEventListener("submit", (e) => {
     !fullName.classList.contains("error") &&
     !email.classList.contains("error") &&
     !phone.classList.contains("error") &&
-    !subject.classList.contains("error") &&
+ /*    !subject.classList.contains("error") && */
     !mess.classList.contains("error")
   ) {
     sendEmail();

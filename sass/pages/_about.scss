@@ -58,7 +58,7 @@
         text-align: center;
         @include ut.border-radius(4px);
         padding: 1rem 1.25rem;
-        background-color: ut.$black;
+        background-color: ut.$color-1;
         border: 1px solid ut.$btn-1;
         /* @media screen and (max-width: 768px) {
           padding: 1px .5008px;

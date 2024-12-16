@@ -7,15 +7,15 @@
   background-image: linear-gradient(ut.$btn-1, white);
   color: transparent;
   background-clip: text;
-  /* border:1px solid white; */
   margin: 20px 20px;
 
   &::after {
     content: attr(data-heading);
     display: block;
-    font-size: map-get(ut.$spacing, "lg");
+    font-size: 20px;
+    font-style: italic;
     font-weight: 300;
-    color: ut.$color-2;
+    color: #ddd;
     margin-top: 10px;
     margin-bottom: 30px;
   }
