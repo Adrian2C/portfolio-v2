@@ -133,4 +133,4 @@ window.addEventListener("scroll", () => {
     navbar.style.backgroundColor = "rgba(34, 34, 34, 0.54)"; // Color original
     navbar.style.boxShadow = "none"; // Sin sombra
   }
-});
+})
