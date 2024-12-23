@@ -224,7 +224,7 @@
         <h2 data-heading="Sueños plasmados y entregados a clientes satisfechos" class="section__title">Mis Ultimos
             trabajos</h2>
         <div class="works__container grid">
-            
+
             <div class="works__card">
                 <img src="./sass/assets/marian portfolio.webp" alt="Mis trabajos">
                 <div class="works__card-title">
@@ -393,13 +393,14 @@
                     <h3 class="testimonial__date">Marzo 2022</h3>
                     <div class="testimonial__profile">
                         <img src="./sass/assets/client2.webp" alt="" class="testimonial__profile-img">
-                
+
                         <div class="testimonial__profile-data">
                             <span class="testimonial__profile-name">Marcos</span>
                             <span class="testimonial__profile-detail">Dueño de RVRS sport</span>
                         </div>
                     </div>
-                </div><div class="testimonial__card swiper-slide">
+                </div>
+                <div class="testimonial__card swiper-slide">
                     <div class="testimonial__quote">
                         <i class='bx bxs-quote-left'></i>
                     </div>
@@ -409,7 +410,7 @@
                     <h3 class="testimonial__date">Marzo 2022</h3>
                     <div class="testimonial__profile">
                         <img src="./sass/assets/client2.webp" alt="" class="testimonial__profile-img">
-                
+
                         <div class="testimonial__profile-data">
                             <span class="testimonial__profile-name">Marcos</span>
                             <span class="testimonial__profile-detail">Dueño de RVRS sport</span>
@@ -421,54 +422,34 @@
             <div class="swiper-pagination"></div>
         </div>
     </section>
-
-    <section class=" contact">
+    
+    <section class="contact">
         <h2 data-heading="Pongamonos en contacto" id="contact" class="section__title hidden">Contactame</h2>
-        <div class="contact__container container grid hidden">
-            <div class="contact__content">
-                <div class="contact__info">
-                    <div class="contact__card">
-                        <i class="uil uil-envelope-edit contact__card-icon"></i>
-                        <h3 class="contact__card-title">Email</h3>
-                        <span class="contact__card-data">adriancoceres.93@gmail.com</span>
-                    </div>
 
-                    <div class="contact__card">
-                        <i class="uil uil-whatsapp contact__card-icon"></i>
-                        <h3 class="contact__card-title">Whatsapp</h3>
-                        <span class="contact__card-data">11-3573-0320</span>
-                    </div>
+        <form action="#">
+            <div class="input-box">
+                <div class="input-field field">
+                    <input type="text" placeholder="Nombre" id="name" class="input" autocomplete="off">
+                    <div class="error-txt">Nombre no puede estar vacio</div>
+                </div>
+                <div class="input-field field">
+                    <input type="text" placeholder="Email" id="email" class="input" autocomplete="off">
+                    <div class="error-txt email">Email no puede estar vacio</div>
+                </div>
+                <div class="input-field field">
+                    <input type="tel" placeholder="telefono" id="phone" class="input" autocomplete="off">
+                    <div class="error-txt">Numero no puede estar vacio</div>
                 </div>
             </div>
 
-            <div class="contact__content">
-                <form action="" class="contact__form" id="form">
-                    <div class="input__container">
-                        <input type="text" class="input" id="name">
-                        <label for="">Nombre</label>
-                        <span>Nombre</span>
-                    </div>
-                    <div class="input__container">
-                        <input type="email" class="input" id="email">
-                        <label for="">Email</label>
-                        <span>Email</span>
-                    </div>
-                    <div class="input__container">
-                        <input type="tel" class="input" id="phone">
-                        <label for="">Numero</label>
-                        <span>Numero</span>
-                    </div>
-                    <div class="input__container textarea">
-                        <textarea name="" id="message" class="input" autocomplete="off"></textarea>
-                        <label for="">Mensaje</label>
-                        <span>Mensaje</span>
-                    </div>
-                    <button type="submit" class="main-btn button"><i class="uil uil-navigator button__icon"></i>
-                        Enviar
-                    </button>
-                </form>
+            <div class="textarea-field field">
+                <textarea name="" id="message" cols="30" rows="10" placeholder="Tu mensaje" class="input"
+                    autocomplete="off"></textarea>
+                <div class="error-txt">El Mensaje no puede estar vacio</div>
             </div>
-        </div>
+
+            <button type="submit">Enviar mensaje</button>
+        </form>
     </section>
     <footer class="footer">
         <div class="footer__bg">
@@ -509,6 +490,7 @@
     <!-- Mailing -->
     <script src="https://smtpjs.com/v3/smtp.js">
     </script>
+    <script src="./js/mail.js"></script>
     <!-- scrollreveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <!-- sweet alert2 -->

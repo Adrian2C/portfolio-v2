@@ -38,8 +38,8 @@ const swiper = new Swiper(".swiper", {
   },
   followFinger: "true",
 });
-/*===============NUMBER ANIMATION================= */
 
+/*===============NUMBER ANIMATION================= */
 
 addEventListener("DOMContentLoaded", () => {
   const contadores = document.querySelectorAll(".number__container--num");
@@ -90,28 +90,6 @@ addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
-
-/*===============INPUT ANIMATION================= */
-const inputs = document.querySelectorAll(".input");
-
-function focusFunc() {
-  let parent = this.parentNode;
-  parent.classList.add("focus");
-}
-function blurFunc() {
-  let parent = this.parentNode;
-  if (this.value == "") {
-    parent.classList.remove("focus");
-  }
-}
-inputs.forEach((input) => {
-  input.addEventListener(
-    "focus",
-    focusFunc
-  ); /*hasta aca hace que al seleccionar el input para escribir, eel placeholder se suba y quede tachado */
-  input.addEventListener("blur", blurFunc);
-});
 
 /* ----========Navbar ======------ */
 const navbar = document.querySelector(".header");
