@@ -1,8 +1,9 @@
 @use "../utils/index" as ut;
 
 .testimonials__container {
-  margin-bottom: map-get(ut.$sizing, "lg");
+  /* margin-bottom: map-get(ut.$sizing, "xxl"); */
   width: 90vw;
+  
 
   @media screen and (min-width: 768px) {
     width: 750px;
@@ -19,14 +20,14 @@
       display: inline-flex;
       font-size: 1.5rem;
       color: ut.$color-3;
-      margin-bottom: map-get(ut.$sizing, "lg");
+      margin-bottom: map-get(ut.$sizing, "");
     }
     .testimonial__description {
       margin-bottom: map-get(ut.$sizing, "lg");
-      font-size: map-get(ut.$sizing, "lg");
+      font-size: map-get(ut.$sizing, "xl");
     }
     .testimonial__date {
-      font-size: map-get(ut.$sizing, "md");
+      font-size: map-get(ut.$sizing, "lg");
       margin-bottom: map-get(ut.$sizing, "3xl");
     }
     .testimonial__profile {
@@ -46,7 +47,7 @@
     }
     .testimonial__profile-name {
       font-size: map-get(ut.$sizing, "xl");
-      font-weight: 600;
+      font-weight: 700;
       color: ut.$color-4;
     }
     .testimonial__profile-detail {

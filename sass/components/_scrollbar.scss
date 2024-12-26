@@ -1,22 +1,22 @@
-@use '../utils/variables' as u;
+@use "../utils/variables" as u;
 
 body::-webkit-scrollbar {
   width: 10px;
 }
 
 body::-webkit-scrollbar-track {
-  background: u.$btn-2;
+  background: #232e33;
   border-radius: 1px;
 }
 
 body::-webkit-scrollbar-thumb {
-  background: u.$color-6;
+  background: #a2c0ce;
   border-radius: 6px;
+  border: 6px solid #4cece4;
 }
 
 @supports not selector(::-webkit-scrollbar) {
   body {
-      scrollbar-color: u.$color-6
-                     u.$btn-2;
+    scrollbar-color: #4cece4 #232e33 ;
   }
 }

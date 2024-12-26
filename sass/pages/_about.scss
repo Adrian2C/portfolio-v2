@@ -1,6 +1,14 @@
 @use "../utils/index" as ut;
-.about{
+.about {
   background: ut.$color-1;
+  width: 100%;
+  height:auto;
+  @media screen and(max-width:768px){
+    margin-top:30px;
+  }
+  h2 {
+    flex-wrap: wrap;
+  }
 }
 .about__container {
   grid-template-columns: repeat(2, 1fr);
@@ -13,6 +21,10 @@
 
   @media screen and (max-width: 768px) {
     column-gap: 0;
+    width: 100vw;
+    padding: 0 10px;
+   /*  border: 1px solid pink; */
+    grid-template-columns: 100%;
   }
   .about__img {
     width: 480px;
@@ -33,15 +45,18 @@
       margin-bottom: map-get(ut.$sizing, "md");
       @media screen and (max-width: 768px) {
         text-align: center;
+        width: 90%;
       }
     }
     .about__description {
-      text-align: justify;
+     /*  text-align: center; */
       padding-right: 6rem;
       margin-bottom: map-get(ut.$sizing, "3xl");
 
       @media screen and (max-width: 768px) {
-        padding-right: 1rem;
+        padding: 1rem;
+        width: 90%;
+        margin: auto;
       }
     }
 
@@ -52,6 +67,8 @@
 
       @media screen and (max-width: 500px) {
         margin-bottom: 2rem;
+        gap:10px;
+        grid-template-columns: 100%;
       }
 
       .about__box {

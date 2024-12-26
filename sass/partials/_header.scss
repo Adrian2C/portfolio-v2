@@ -4,7 +4,6 @@ li {
 }
 
 .header {
-  background-color: rgba(34, 34, 34, 0.541);
   transition: background-color 0.3s ease;
   position: fixed;
   width: 100%;
@@ -14,8 +13,7 @@ li {
     position: fixed;
     z-index: 99;
     top: 0;
-    width: -webkit-fill-available;
-
+    height: 70px;
     background-color: #222222b0;
     color: white;
   }
@@ -63,7 +61,9 @@ li {
       @media only screen and (max-width: 768px) {
         display: block;
         cursor: pointer;
-        font-size: 40px;
+      }
+      .bx-menu{
+        font-size: 60px;
       }
     }
 
