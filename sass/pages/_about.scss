@@ -23,7 +23,6 @@
     column-gap: 0;
     width: 100vw;
     padding: 0 10px;
-   /*  border: 1px solid pink; */
     grid-template-columns: 100%;
   }
   .about__img {
@@ -49,7 +48,6 @@
       }
     }
     .about__description {
-     /*  text-align: center; */
       padding-right: 6rem;
       margin-bottom: map-get(ut.$sizing, "3xl");
 
@@ -77,9 +75,6 @@
         padding: 1rem 1.25rem;
         background-color: ut.$color-1;
         border: 1px solid ut.$btn-1;
-        /* @media screen and (max-width: 768px) {
-          padding: 1px .5008px;
-        } */
 
         .about__icon {
           font-size: 1.5rem;

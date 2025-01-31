@@ -14,7 +14,6 @@
   -moz-box-shadow: $x $y $blur $color;
   box-shadow: $x $y $blur $color;
 }
-//transitions con propiedades ya preconfiguradas : all .3s eas
 @mixin transition($property: all, $duration: 0.3s, $timing-function: ease-in-out) {
   transition: $property $duration $timing-function;
 }
